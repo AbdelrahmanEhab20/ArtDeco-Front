@@ -160,6 +160,21 @@
   .ThirdWrapper .topLeft .form-group .file-Attach {
     width: 300px;
   }
+  .ForthWrapper {
+    height: 100%;
+    padding: 0px 20px;
+    display: block;
+    align-items: center;
+  }
+  .ForthWrapper .topRight .Special {
+    border: 1px solid black;
+    width: 400px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+  }
+  .ForthWrapper .topRight .Special h6 {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 947px) {
@@ -213,6 +228,21 @@
   }
   .ThirdWrapper .topLeft .form-group .file-Attach {
     width: 300px;
+  }
+  .ForthWrapper {
+    height: 100%;
+    padding: 0px 20px;
+    display: block;
+    align-items: center;
+  }
+  .ForthWrapper .topRight .Special {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+  }
+  .ForthWrapper .topRight .Special h6 {
+    padding: 15px;
   }
 }
 
@@ -268,6 +298,21 @@
   .ThirdWrapper .topLeft .form-group .file-Attach {
     width: 300px;
   }
+  .ForthWrapper {
+    height: 100%;
+    padding: 0px 20px;
+    display: block;
+    align-items: center;
+  }
+  .ForthWrapper .topRight .Special {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+  }
+  .ForthWrapper .topRight .Special h6 {
+    padding: 15px;
+  }
 }
 @media (max-width: 690px) {
   .MainDiv {
@@ -321,6 +366,21 @@
   .ThirdWrapper .topLeft .form-group .file-Attach {
     width: 300px;
   }
+  .ForthWrapper {
+    height: 100%;
+    padding: 0px 20px;
+    display: block;
+    align-items: center;
+  }
+  .ForthWrapper .topRight .Special {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+  }
+  .ForthWrapper .topRight .Special h6 {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -351,7 +411,7 @@
     font-weight: 400;
   }
   .SecondWrapper .topLeft .form-group input {
-    width: 200px;
+    width: 300px;
     height: 40px;
     font-size: 20px;
     font-weight: 400;
@@ -374,5 +434,20 @@
   }
   .ThirdWrapper .topLeft .form-group .file-Attach {
     width: 300px;
+  }
+  .ForthWrapper {
+    height: 100%;
+    padding: 0px 20px;
+    display: block;
+    align-items: center;
+  }
+  .ForthWrapper .topRight .Special {
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+  }
+  .ForthWrapper .topRight .Special h6 {
+    padding: 15px;
   }
 }

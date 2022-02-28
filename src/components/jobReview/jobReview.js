@@ -12,7 +12,6 @@ export default function JobReview() {
                         <span className="Sign-Page">Review</span>
                     </div>
                     <div className="topRight">
-                        
                         <button type="button" class="btn">
                             Save Job Post
                         </button>
