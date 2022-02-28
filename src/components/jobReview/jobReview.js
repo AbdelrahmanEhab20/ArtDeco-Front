@@ -12,9 +12,7 @@ export default function JobReview() {
                         <span className="Sign-Page">Review</span>
                     </div>
                     <div className="topRight">
-                        {/* <button type="button" class="btn  btn-info btn-circle">
-                            Save Job Post
-                        </button> */}
+                        
                         <button type="button" class="btn">
                             Save Job Post
                         </button>
@@ -78,6 +76,7 @@ export default function JobReview() {
                                 <span class="input-group-text"><PaidIcon /></span>
                                 <input
                                     type="number"
+                                    min={0}
                                     class="form-control"
                                     aria-label="Amount (to the nearest dollar)"
                                 ></input>
