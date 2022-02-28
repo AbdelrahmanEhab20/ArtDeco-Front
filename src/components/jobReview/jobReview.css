@@ -1,0 +1,129 @@
+.MainDiv {
+  width: 65%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  /* position: sticky;
+  top: 0;
+  z-index: 999; */
+}
+.FirstWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Sign-Page {
+  font-weight: 400;
+  font-size: 40px;
+  color: rgb(44, 44, 48);
+  margin-left: 30px;
+  padding: 20px;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 30px;
+}
+.topRight .btn {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  background: green;
+  transition: all 0.3s ease 0s;
+  width: 200px;
+  height: 50px;
+}
+.topRight .btn:hover {
+  color: rgb(0, 0, 0);
+  background: transparent;
+  font-weight: bold;
+  border: 2px solid rgba(5, 12, 17, 0.75);
+}
+
+/* .topRight .btn:hover {
+  background-color: rgb(8, 168, 8);
+  color: rgb(87, 82, 82);
+  font-weight: bold;
+  font-size: 22px;
+} */
+
+/* SecondWrapper */
+.SecondWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.SecondWrapper .topLeft .form-group label {
+  font-size: 22px;
+  font-weight: 400;
+}
+.SecondWrapper .topLeft .form-group input {
+  width: 450px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1px solid black;
+}
+.SecondWrapper .topLeft small {
+  color: rgb(231, 160, 26);
+}
+
+/* ThirdWrapper */
+.ThirdWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.ThirdWrapper .topLeft h5 {
+  font-size: 22px;
+  font-weight: 400;
+}
+.ThirdWrapper .topLeft h6 {
+  padding: 5px;
+}
+.ThirdWrapper .topLeft h6 span {
+  color: green;
+  font-weight: bold;
+}
+.ThirdWrapper .topLeft .form-group textarea {
+  resize: none;
+  width: 600px;
+  border: 1px solid black;
+}
+.ThirdWrapper .topLeft .form-group .file-Attach {
+  width: 500px;
+}
+
+/* ForthWrapper */
+.ForthWrapper {
+  height: 100%;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+.ForthWrapper .topRight .Special {
+  border: 1px solid black;
+  width: 400px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+}
+.ForthWrapper .topRight .Special h6 {
+  padding: 15px;
+}
