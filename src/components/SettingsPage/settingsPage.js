@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Grid } from "@mui/material";
 import Contact from "./components/Contact";
-import Privacy from './components/Privacy';
+import Privacy from "./components/Privacy";
 
 export function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -50,15 +50,6 @@ export default function SettingsPage() {
     setValue(newValue);
   };
 
-  //   var tabsView = "vertical"
-  //   window.addEventListener('resize', function(event){
-  //     if (window.innerWidth < 900) {
-  //       tabsView = ""
-  //     }else{
-  //       tabsView = "dsd"
-  //     }
-  //     console.log(tabsView);
-  // });
   return (
     <>
       <Container className='top_60'>
@@ -104,7 +95,7 @@ export default function SettingsPage() {
                 <Contact />
               </TabPanel>
               <TabPanel value={value} index={1}>
-              <Privacy />
+                <Privacy />
               </TabPanel>
               <TabPanel value={value} index={2}>
                 Item Three
