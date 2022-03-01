@@ -1,7 +1,6 @@
 import Footer from "../Footer/Footer";
 import "./jobPorposal.css";
 import PaidIcon from '@mui/icons-material/Paid';
-import Proposal from './../proposal/proposal';
 export default function JobProposal() {
     return (
         <>
