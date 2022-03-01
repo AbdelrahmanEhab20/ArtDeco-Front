@@ -1,7 +1,63 @@
+import React, { useState } from "react";
 import Footer from "../Footer/Footer";
 import "./jobPorposal.css";
 import PaidIcon from '@mui/icons-material/Paid';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { axiosInstace } from "../../network/axiosConfig";
+import { useNavigate } from 'react-router-dom';
+
+const MySwal = withReactContent(Swal);
+
 export default function JobProposal() {
+    const navigate = useNavigate();
+
+    const [formValues, setFormValues] = useState({
+        coverLetter: "",
+        budget: "",
+        Estimated_date: ""
+    });
+    const handleFormChange = (event) => {
+        switch (event.target.name) {
+            case "coverLetter":
+                setFormValues({
+                    ...formValues,
+                    coverLetter: event.target.value,
+                });
+                break;
+
+            case "budget":
+                setFormValues({
+                    ...formValues,
+                    budget: event.target.value,
+                });
+                break;
+
+            case "Estimated_date":
+                setFormValues({
+                    ...formValues,
+                    Estimated_date: event.target.value,
+                });
+                break;
+
+            default:
+                break;
+        }
+    };
+    const handleSubmitForm = (e) => {
+        e.preventDefault();
+        axiosInstace
+            .post('', formValues)
+            .then((response) => {
+                console.log(response.data);
+                // navigate('/');
+                MySwal.fire(``);
+            }).catch((err) => {
+                console.log(err);
+                MySwal.fire(``);
+            });
+    };
+
     return (
         <>
             <br />
@@ -12,7 +68,7 @@ export default function JobProposal() {
                         <span className="Proposal Sign-Page">Proposal</span>
                     </div>
                     <div className="Proposal topRight">
-                        <button type="button" class="Proposal btn">
+                        <button onClick={(e) => handleSubmitForm(e)} type="button" class="Proposal btn">
                             Send Proposal
                         </button>
                     </div>
@@ -34,6 +90,9 @@ export default function JobProposal() {
                         </h6>
                         <div class="form-group">
                             <textarea
+                                name="coverLetter"
+                                value={formValues.coverLetter}
+                                onChange={(e) => handleFormChange(e)}
                                 class="form-control"
                                 id="exampleFormControlTextarea1"
                                 rows="10"
@@ -57,6 +116,9 @@ export default function JobProposal() {
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><PaidIcon /></span>
                                 <input
+                                    name="budget"
+                                    value={formValues.budget}
+                                    onChange={(e) => handleFormChange(e)}
                                     type="number"
                                     min={0}
                                     class="form-control"
@@ -69,6 +131,9 @@ export default function JobProposal() {
                             <div class="input-group mb-3">
 
                                 <input
+                                    name="Estimated_date"
+                                    value={formValues.Estimated_date}
+                                    onChange={(e) => handleFormChange(e)}
                                     type="date"
                                     class="form-control"
                                     aria-label="Amount (to the nearest dollar)"
