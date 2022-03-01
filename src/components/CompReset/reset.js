@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import { validEmail, validPassword } from "./regex.js";
+import { useParams } from "react-router-dom";
 
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -19,7 +20,12 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
 const MySwal = withReactContent(Swal);
+
 const Reset = () => {
+
+    const params = useParams();
+    console.log(params);
+
     const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
         password: "",
@@ -74,7 +80,7 @@ const Reset = () => {
         if (!formValuesErrors.passErr && !formValuesErrors.passwordConfirmErr) {
             axios
                 .patch(
-                    `http://localhost:3000/api/v1/users/resetPassword/28798fb59fbaf1f8826cd00c06452e3c069ab4512c74f56276be6db92b671817`,
+                    `http://localhost:3000/api/v1/contractors/resetPassword/${params.resetToken}`,
                     formValues
                 )
                 .then((response) => {

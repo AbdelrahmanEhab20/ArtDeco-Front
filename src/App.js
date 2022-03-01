@@ -36,7 +36,7 @@ function App() {
         <Route path={"/"} exact element={<MainPage />}></Route>
         <Route path={"/user_login"} exact element={<Userlogin />}></Route>
         <Route path={"/user_signup"} exact element={<UserSignUp />}></Route>
-        <Route path={"/user_reset"} exact element={<Reset />}></Route>
+        <Route path={`/user_reset/:resetToken`} exact element={<Reset />}></Route>
         <Route path={"/company_login"} exact element={<Companylogin />}></Route>
         <Route path={"/company_signup"} exact element={<CompanySignUp />}></Route>
         <Route path={"/company_reset"} exact element={<CompanyReset />}></Route>

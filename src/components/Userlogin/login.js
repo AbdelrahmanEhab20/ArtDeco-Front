@@ -119,7 +119,6 @@ const Login = () => {
                 .post('http://localhost:3000/api/v1/users/forgotPassword', formValues)
                 .then((response) => {
                     console.log(response);
-                    navigate('/user_reset');
                 }).catch((err) => {
                     console.log(err);
                 });
