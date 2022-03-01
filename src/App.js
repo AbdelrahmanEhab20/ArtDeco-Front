@@ -23,6 +23,7 @@ import Sidebar from './components/blog/Sidebar'
 import Reset from './components/userReset/reset'
 import CompanyReset from './components/CompReset/reset.js'
 import JobReview from './components/jobReview/jobReview'
+import JobProposal from './components/JobPorposal/jobPorposal'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path={"/ClientFeed"} exact element={<ClientFeed />}></Route>
         <Route path={"/Jobdetails"} exact element={<Jobdetails />}></Route>
         <Route path={"/JobReview"} exact element={<JobReview />}></Route>
+        <Route path={"/JobProposal"} exact element={<JobProposal />}></Route>
         <Route path={"/Proposal"} exact element={<Proposal />}></Route>
         <Route path={"/ContactorProfile"} exact element={<ContactorProfile />}></Route>
         <Route path={"/SettingsPage"} exact element={<SettingsPage />}></Route>
