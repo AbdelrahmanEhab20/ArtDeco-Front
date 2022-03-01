@@ -80,14 +80,14 @@ const Reset = () => {
         if (!formValuesErrors.passErr && !formValuesErrors.passwordConfirmErr) {
             axios
                 .patch(
-                    `http://localhost:3000/api/v1/contractors/resetPassword/${params.resetToken}`,
+                    `http://localhost:8000/api/v1/contractors/resetPassword/${params.resetToken}`,
                     formValues
                 )
                 .then((response) => {
                     console.log(response);
                     navigate("/company_login");
                     MySwal.fire(
-                        `Password Rested Successfully,Please Login With New Password`
+                        `Password Rested Successfully,Please Login With Your New Password`
                     );
                 })
                 .catch((err) => {

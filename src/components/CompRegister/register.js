@@ -142,7 +142,7 @@ const SignUp = () => {
             // console.log(formValues);
             // console.log("Registered Successfully ");
             axios
-                .post('http://localhost:3000/api/v1/contractors/signup', formValues)
+                .post('http://localhost:8000/api/v1/contractors/signup', formValues)
                 .then((response) => {
                     console.log(response.data);
                     navigate('/');

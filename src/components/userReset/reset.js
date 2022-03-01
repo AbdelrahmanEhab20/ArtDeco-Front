@@ -78,11 +78,11 @@ const Reset = () => {
         e.preventDefault();
         if (!formValuesErrors.passErr && !formValuesErrors.passwordConfirmErr) {
             axios
-                .patch(`http://localhost:3000/api/v1/users/resetPassword/${params.resetToken}`, formValues)
+                .patch(`http://localhost:8000/api/v1/users/resetPassword/${params.resetToken}`, formValues)
                 .then((response) => {
                     console.log(response);
                     navigate('/user_login');
-                    MySwal.fire(`Password Rested Successfully,Please Login With New Password`);
+                    MySwal.fire(`Password Rested Successfully,Please Login With Your New Password`);
                 }).catch((err) => {
                     console.log(err);
                     MySwal.fire(`Invalid Password , Please Enter Your Email and Password in Right Way`);

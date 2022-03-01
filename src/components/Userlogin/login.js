@@ -98,7 +98,7 @@ const Login = () => {
         e.preventDefault();
         if (!formValuesErrors.emailErr && !formValuesErrors.passErr) {
             axios
-                .post('http://localhost:3000/api/v1/users/login', formValues)
+                .post('http://localhost:8000/api/v1/users/login', formValues)
                 .then((response) => {
                     console.log(response.data);
                     navigate('/');
@@ -116,9 +116,10 @@ const Login = () => {
         e.preventDefault();
         if (!formValuesErrors.emailErr) {
             axios
-                .post('http://localhost:3000/api/v1/users/forgotPassword', formValues)
+                .post('http://localhost:8000/api/v1/users/forgotPassword', formValues)
                 .then((response) => {
                     console.log(response);
+                    MySwal.fire(`Please Check Your Email To Reset Your Password`);
                 }).catch((err) => {
                     console.log(err);
                 });
