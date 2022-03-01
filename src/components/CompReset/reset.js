@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
 import { validEmail, validPassword } from "./regex.js";
 
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 import {
     Grid,
@@ -15,7 +14,7 @@ import {
     Button,
     Typography,
 } from "@material-ui/core";
-import LockResetIcon from '@mui/icons-material/LockReset';
+import LockResetIcon from "@mui/icons-material/LockReset";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
@@ -24,12 +23,12 @@ const Reset = () => {
     const navigate = useNavigate();
     const [formValues, setFormValues] = useState({
         password: "",
-        passwordConfirm: ""
+        passwordConfirm: "",
     });
 
     const [formValuesErrors, setFormValuesErrors] = useState({
         passErr: null,
-        passwordConfirmErr: null
+        passwordConfirmErr: null,
     });
 
     const handleFormChange = (event) => {
@@ -74,14 +73,22 @@ const Reset = () => {
         e.preventDefault();
         if (!formValuesErrors.passErr && !formValuesErrors.passwordConfirmErr) {
             axios
-                .patch(`http://localhost:3000/api/v1/contractors/resetPassword/3de2523df49a063c8eb75abaf5fb2db00eb6941f0688bcfad67a35642ccfa2bf`, formValues)
+                .patch(
+                    `http://localhost:3000/api/v1/users/resetPassword/28798fb59fbaf1f8826cd00c06452e3c069ab4512c74f56276be6db92b671817`,
+                    formValues
+                )
                 .then((response) => {
                     console.log(response);
-                    navigate('/company_login');
-                    MySwal.fire(`Password Rested Successfully,Please Login With New Password`);
-                }).catch((err) => {
+                    navigate("/company_login");
+                    MySwal.fire(
+                        `Password Rested Successfully,Please Login With New Password`
+                    );
+                })
+                .catch((err) => {
                     console.log(err);
-                    MySwal.fire(`Invalid Password , Please Enter Your Email and Password in Right Way`);
+                    MySwal.fire(
+                        `Invalid Password , Please Enter Your Email and Password in Right Way`
+                    );
                 });
         }
     };
@@ -97,10 +104,7 @@ const Reset = () => {
     return (
         <div className="text-center">
             <Grid>
-                <Paper
-                    elevation={10}
-                    style={paperStyle}
-                >
+                <Paper elevation={10} style={paperStyle}>
                     <Grid align="center">
                         <Avatar style={avatarStyle}>
                             <LockResetIcon />
@@ -109,7 +113,6 @@ const Reset = () => {
                     </Grid>
 
                     <form onSubmit={(e) => handleSubmitForm(e)}>
-
                         <TextField
                             label="Password"
                             placeholder="Enter password"
@@ -157,7 +160,7 @@ const Reset = () => {
                     </form>
                 </Paper>
             </Grid>
-        </div >
+        </div>
     );
 };
 

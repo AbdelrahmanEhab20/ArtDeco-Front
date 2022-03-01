@@ -104,7 +104,7 @@ const Login = () => {
                     console.log(response.data);
                     navigate('/');
                     // console.log(response.data.data.user.name);
-                    MySwal.fire(`Logged-IN Successfully,Welcome ${response.data.data.contactor.name} , At Shatably.com`);
+                    MySwal.fire(`Logged-IN Successfully,Welcome ${response.data.data.contractor.name} , At Shatably.com`);
                     localStorage.setItem("company_token", response.data.token);
                 }).catch((err) => {
                     console.log(err);
@@ -119,7 +119,6 @@ const Login = () => {
                 .post('http://localhost:3000/api/v1/contractors/forgotPassword', formValues)
                 .then((response) => {
                     console.log(response);
-                    navigate('/company_reset');
                 }).catch((err) => {
                     console.log(err);
                 });
