@@ -101,7 +101,7 @@ const Login = () => {
                 .post('http://localhost:8000/api/v1/users/login', formValues)
                 .then((response) => {
                     console.log(response.data);
-                    navigate('/');
+                    navigate('/JobCreation');
                     // console.log(response.data.data.user.name);
                     MySwal.fire(`Logged-IN Successfully,Welcome ${response.data.data.user.name} , At Shatably.com`);
                     localStorage.setItem("user_token", response.data.token);

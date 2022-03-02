@@ -46,7 +46,7 @@ function App() {
         <Route path={"/Userprofile"} exact element={<Userprofile />}></Route>
         <Route path={"/ClientFeed"} exact element={<ClientFeed />}></Route>
         <Route path={"/Jobdetails"} exact element={<Jobdetails />}></Route>
-        <Route path={"/JobReview"} exact element={<JobReview />}></Route>
+        <Route path={"/JobCreation"} exact element={<JobReview />}></Route>
         <Route path={"/JobProposal"} exact element={<JobProposal />}></Route>
         <Route path={"/Proposal"} exact element={<Proposal />}></Route>
         <Route path={"/ContactorProfile"} exact element={<ContactorProfile />}></Route>

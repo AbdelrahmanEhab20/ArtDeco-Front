@@ -5,17 +5,19 @@ import PaidIcon from '@mui/icons-material/Paid';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 import { axiosInstace } from "../../network/axiosConfig";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+
 
 const MySwal = withReactContent(Swal);
 
 export default function JobProposal() {
     const navigate = useNavigate();
+    const params = useParams();
 
     const [formValues, setFormValues] = useState({
         coverLetter: "",
         budget: "",
-        Estimated_date: ""
+        estimatedTime: ""
     });
     const handleFormChange = (event) => {
         switch (event.target.name) {
@@ -33,10 +35,10 @@ export default function JobProposal() {
                 });
                 break;
 
-            case "Estimated_date":
+            case "estimatedTime":
                 setFormValues({
                     ...formValues,
-                    Estimated_date: event.target.value,
+                    estimatedTime: event.target.value,
                 });
                 break;
 
@@ -47,7 +49,7 @@ export default function JobProposal() {
     const handleSubmitForm = (e) => {
         e.preventDefault();
         axiosInstace
-            .post('', formValues)
+            .post(`job/$/proposal`, formValues)
             .then((response) => {
                 console.log(response.data);
                 // navigate('/');
@@ -131,8 +133,8 @@ export default function JobProposal() {
                             <div class="input-group mb-3">
 
                                 <input
-                                    name="Estimated_date"
-                                    value={formValues.Estimated_date}
+                                    name="estimatedTime"
+                                    value={formValues.estimatedTime}
                                     onChange={(e) => handleFormChange(e)}
                                     type="date"
                                     class="form-control"

@@ -15,9 +15,9 @@ export default function JobReview() {
 
     const [formValues, setFormValues] = useState({
         headLine: "",
-        describeJob: "",
+        description: "",
         budget: "",
-        Estimated_date: ""
+        estimatedTime: ""
     });
 
     const handleFormChange = (event) => {
@@ -29,10 +29,10 @@ export default function JobReview() {
                 });
                 break;
 
-            case "describeJob":
+            case "description":
                 setFormValues({
                     ...formValues,
-                    describeJob: event.target.value,
+                    description: event.target.value,
                 });
                 break;
 
@@ -43,10 +43,10 @@ export default function JobReview() {
                 });
                 break;
 
-            case "Estimated_date":
+            case "estimatedTime":
                 setFormValues({
                     ...formValues,
-                    Estimated_date: event.target.value,
+                    estimatedTime: event.target.value,
                 });
                 break;
 
@@ -56,15 +56,15 @@ export default function JobReview() {
     };
     const handleSubmitForm = (e) => {
         e.preventDefault();
+        console.log(formValues);
         axiosInstace
-            .post('', formValues)
+            .post('job', formValues)
             .then((response) => {
                 console.log(response.data);
-                // navigate('/');
-                MySwal.fire(``);
+                MySwal.fire(`Job Added Successfully`);
             }).catch((err) => {
                 console.log(err);
-                MySwal.fire(``);
+                MySwal.fire(`Can't Add This Job`);
             });
     };
 
@@ -78,7 +78,7 @@ export default function JobReview() {
                         <span className="Sign-Page">Review</span>
                     </div>
                     <div className="topRight">
-                        <button onClick={(e) => handleSubmitForm(e)} type="button" class="btn">
+                        <button onClick={(e) => handleSubmitForm(e)} type="button" className="btn">
                             Save Job Post
                         </button>
                     </div>
@@ -86,11 +86,11 @@ export default function JobReview() {
                 <hr />
                 <div className="SecondWrapper">
                     <div className="topLeft">
-                        <div class="form-group">
+                        <div className="form-group">
                             <label>HeadLine</label>
                             <input
                                 type="text"
-                                class="form-control"
+                                className="form-control"
                                 name="headLine"
                                 value={formValues.headLine}
                                 onChange={(e) => handleFormChange(e)}
@@ -118,18 +118,18 @@ export default function JobReview() {
                             <span>Here are several examples</span> that illustrate best
                             practices for effective job posts.
                         </h6>
-                        <div class="form-group">
+                        <div className="form-group">
                             <textarea
-                                class="form-control"
+                                className="form-control"
                                 id="exampleFormControlTextarea1"
                                 rows="10"
-                                name="describeJob"
-                                value={formValues.describeJob}
+                                name="description"
+                                value={formValues.description}
                                 onChange={(e) => handleFormChange(e)}
                             ></textarea>
                             <br />
                             <input
-                                class="form-control file-Attach"
+                                className="form-control file-Attach"
                                 type="file"
                                 id="formFileMultiple"
                                 multiple
@@ -141,10 +141,10 @@ export default function JobReview() {
                 <div className="ForthWrapper">
                     <div className="topLeft">
                         <h5>Details</h5>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label>Budget</label>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><PaidIcon /></span>
+                            <div className="input-group mb-3">
+                                <span className="input-group-text"><PaidIcon /></span>
                                 <input
                                     type="number"
                                     min={0}
@@ -152,21 +152,21 @@ export default function JobReview() {
                                     value={formValues.budget}
                                     onChange={(e) => handleFormChange(e)}
 
-                                    class="form-control"
+                                    className="form-control"
                                     aria-label="Amount (to the nearest dollar)"
                                 ></input>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div className="form-group">
                             <label>Estimated Date</label>
-                            <div class="input-group mb-3">
+                            <div className="input-group mb-3">
 
                                 <input
                                     type="date"
-                                    class="form-control"
+                                    className="form-control"
                                     aria-label="Amount (to the nearest dollar)"
-                                    name="Estimated_date"
-                                    value={formValues.Estimated_date}
+                                    name="estimatedTime"
+                                    value={formValues.estimatedTime}
                                     onChange={(e) => handleFormChange(e)}
                                 ></input>
                             </div>
@@ -187,7 +187,7 @@ export default function JobReview() {
 
                     </div>
                     <div className="topRight">
-                        <button onClick={(e) => handleSubmitForm(e)} type="button" class="btn">
+                        <button onClick={(e) => handleSubmitForm(e)} type="button" className="btn">
                             Save Job Post
                         </button>
                     </div>
