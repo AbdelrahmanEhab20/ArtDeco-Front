@@ -4,6 +4,7 @@ import './jobdetails.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pic1 from '../../images/marija-zaric-cz75BNrAzOs-unsplash.jpg'
 import pic2 from '../../images/wiktor-karkocha-Dt3y3dQR6Qk-unsplash (1).jpg'
+import Foooter from '../Footer/Footer'
 
 export default function Jobdetails() {
     return (
@@ -118,6 +119,7 @@ export default function Jobdetails() {
                     </div>
                 </div>
             </div>
+            <Foooter />
         </div>
     )
 }

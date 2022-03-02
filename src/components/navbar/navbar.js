@@ -1,38 +1,81 @@
-import React from 'react';
-import './Navbar.css';
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  Typography,
+  makeStyles,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
+import { Link } from "react-router-dom";
+import DrawerComponent from "./drawer";
 
-import { Link } from 'react-router-dom';
-import image from '../../images/logo-x.jpg';
+const useStyles = makeStyles((theme) => ({
+  navlinks: {
+    marginLeft: theme.spacing(80),
+    display: "flex",
+  },
+  logo: {
+    flexGrow: "1",
+    cursor: "pointer",
+    color: "white",
+    height: '90px',
+    width:'120px'
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "20px",
+    marginLeft: theme.spacing(4),
+    "&:hover": {
+      color: "grey",
+      borderBottom: "1px solid white",
+    }
+  },
+}));
 
-// import { IoIosHome } from "react-icons/io";
+function Navbar() {
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-export default function NavBar() {
-    // function CheckStorage() {
-    //     const saved = localStorage.getItem("token");
-    //     if (saved === '') {
-    //         console.log('empty')
-    //     }
-    // }
-    return (
-        <div className="header ">
-            <div className="header__left">
-                <Link to="/">
-                    <img
-                        className="header__logo"
-                        src={image}
-                        alt="logo"
-                    />
-                    {/* <h4><IoIosHome></IoIosHome>Shatably</h4> */}
-                </Link>
-                <h4><Link to="/About">How-It-Works</Link></h4>
-                <h4>Browse-Ads</h4>
-            </div >
-
-            <div className="header__right">
-                {/* hidden={CheckStorage()} */}
-                <button > <Link to="/Choose">Login/Register </Link></button>
-                {/* <button > <Link to="/Choose">Sign-Up </Link></button> */}
-            </div>
-        </div >
-    )
+  return (
+    <AppBar color='primary' elevation={2} position="static">
+      <CssBaseline />
+      <Toolbar>
+        <Typography variant="h4" className={classes.logo}>
+          <img src="./logo.png" alt="" srcset="" className={classes.logo}/>
+        </Typography>
+        {isMobile ? (
+          <DrawerComponent />
+        ) : (
+          <div className={classes.navlinks}>
+            <Link to="/" className={classes.link}>
+              Home
+            </Link>
+            <Link to="/About" className={classes.link}>
+              About
+            </Link>
+            <Link to="/Blog" className={classes.link}>
+            Ads
+            </Link>
+            <Link to="/Userprofile" className={classes.link}>
+            Client
+            </Link>
+            <Link to="/ClientFeed" className={classes.link}>
+            Feed
+            </Link>
+            <Link to="/ContactorProfile" className={classes.link}>
+            Contractor
+            </Link>
+            <Link to="/Choose" className={classes.link}>
+            Account
+            </Link>
+          </div>
+        )}
+      </Toolbar>
+    </AppBar>
+  );
 }
+export default Navbar;

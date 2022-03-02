@@ -108,10 +108,14 @@
   line-height: 15px;
 } */
 
+.colorMe {
+    background-color: #2f2f4d;
+}
+
 .footer {
     padding: 4rem 0;
-    background: #27282e;
     color: white;
+    background-color: #2f2f4d;
 }
 
 .footer a {
@@ -171,7 +175,7 @@
 .footer-social-item {
     width: 45px;
     height: 45px;
-    background: #393a42;
+    background: rgb(97, 95, 95);
     margin: 5px;
     display: flex;
     justify-content: center;

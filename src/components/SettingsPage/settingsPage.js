@@ -8,8 +8,10 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Grid } from "@mui/material";
 import Contact from "./components/Contact";
-import Privacy from "./components/Privacy";
-
+import UpdatePassword from "./components/UpdatePassword";
+import { axiosInstace } from "../../network/axiosConfig";
+import { useState, useEffect } from "react";
+import CircularProgress from "@mui/material/CircularProgress";
 export function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -45,10 +47,48 @@ export function a11yProps(index) {
 
 export default function SettingsPage() {
   const [value, setValue] = React.useState(0);
+  const [contractorDetails, setContractorDetails] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  useEffect(() => {
+    axiosInstace
+      .get("contractors/getMe", {})
+      .then(res => {
+        setContractorDetails(res.data.data.data);
+        console.log("res", res.data.data.data);
+        console.log("contractorDetails", contractorDetails);
+        setIsLoading(false);
+      })
+      .catch(err => console.log(err));
+  }, [contractorDetails]);
+
+  // function ubdateMe(data){
+  //   console.log(data)
+  //   axiosInstace.patch("contractors/updateMe" , {
+  //     "name": "Ahmed Mohamed2",
+  //     "email": "Ahmed@google.com"
+  // })
+  //     .then((res) => {
+  //       window.location.reload()
+  //     })
+  //     .catch((err) => console.log(err));
+
+  // }
+  // const handleSubmitForm = (formValues) => {
+  //   console.log("formValues",formValues)
+  //   // console.log(data)
+  //   axiosInstace.patch("contractors/updateMe" , formValues)
+  //     .then((res) => {
+  //       console.log(res.data.data.user)
+  //       // window.location.reload()
+  //     })
+  //     .catch((err) => console.log(err));
+
+  // };
 
   return (
     <>
@@ -91,11 +131,21 @@ export default function SettingsPage() {
           </Col>
           <div className='col-lg-9 col-md-8 tab-container'>
             <div className='content'>
+              { isLoading ? (
+              <div className='w-100 position-relative'>
+                <Box
+                  className='position-absolute top-0 start-50 translate-middle-x'
+                  sx={{ display: "flex" }}
+                >
+                  <CircularProgress className='m-5' />
+                </Box>
+              </div>
+              ) : (<>
               <TabPanel value={value} index={0}>
-                <Contact />
+                <Contact contractorDetails={contractorDetails} />
               </TabPanel>
               <TabPanel value={value} index={1}>
-                <Privacy />
+                <UpdatePassword />
               </TabPanel>
               <TabPanel value={value} index={2}>
                 Item Three
@@ -111,7 +161,8 @@ export default function SettingsPage() {
               </TabPanel>
               <TabPanel value={value} index={6}>
                 Item Seven
-              </TabPanel>
+              </TabPanel></>
+              )}
             </div>
           </div>
         </Row>

@@ -180,11 +180,11 @@ export default {
     {
       image: "https://i.pinimg.com/736x/e5/27/be/e527beb935b917b6d018fd6a6f81c7cb.jpg",
       title: "Title 5",
-      description: "Description Description Description Description "
+      description: "Description Description Description Description fdb trber erber erber erbe qFWEFG ERGAWEEG WWgW WgfQE fdb trber erber erber erbe qFWEFG ERGAWEEG WWgW WgfQE"
     },
     {
       image: "https://almalnews.com/wp-content/uploads/2019/05/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D9%82%D8%A9.jpg",
-      title: "Title 6",
+      title: "Title 6 fdb trber erber erber erbe qFWEFG ERGAWEEG WWgW WgfQE",
       description: "Description Description Description Description "
     },
   ]

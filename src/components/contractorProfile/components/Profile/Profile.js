@@ -25,7 +25,7 @@ const Profile = (props) => {
         <li></li>
         <li>
           <p>
-            <span>Name:</span> {name}{" "}
+            <span>Name:</span> {props.contractorDetails.name}{" "}
           </p>
         </li>
         <li>
@@ -40,7 +40,7 @@ const Profile = (props) => {
         </li>
         <li>
           <p>
-            <span>Email:</span> {email}
+            <span>Email:</span> {props.contractorDetails.email}
           </p>
         </li>
         {Object.keys(socials).map((key) => (

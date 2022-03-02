@@ -96,7 +96,7 @@ export default function NavBar() {
                                             <input type="text" className="w-100 sbs-area-inp" />
                                         </div>
                                         <div className="col-lg-3 d-flex align-items-center justify-content-between ">
-                                            <input type="submit" className="w-100 h-100 btn btn-dark" value="Send" />
+                                            <input type="submit" className="w-100 h-100 btn btn-secondary" value="Send" />
                                         </div>
                                     </div>
                                 </div>

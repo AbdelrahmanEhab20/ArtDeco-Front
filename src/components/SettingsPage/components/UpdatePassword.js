@@ -58,7 +58,6 @@ export default function UpdatePassword(props) {
       });  
   };
 
-  
   return (
     <>
       <Grid container className='section pb_50' spacing='10'>

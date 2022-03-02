@@ -4,6 +4,10 @@ import * as React from 'react';
 import './userprofile.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Foooter from '../Footer/Footer'
+import { Grid } from "@mui/material";
+import CustomButton from "../contractorProfile/components/Button/Button";
+import EditIcon from "@mui/icons-material/Edit";
+import { Link } from "react-router-dom";
 
 
 export default function UserProfile() {
@@ -23,7 +27,9 @@ export default function UserProfile() {
                       <p class="text-secondary mb-1"></p>
                       <p class="text-muted font-size-sm">Egypt, Cairo</p>
                       {/* <button class="btn btn-primary">Follow</button> */}
-                      <button class="btn btn-outline-primary">Edit</button>
+                      <button class="btn btn-outline-primary">
+                        Edit
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -33,6 +39,11 @@ export default function UserProfile() {
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
+                  <Grid item className='section_title top_30'>
+                    <span></span>
+                    <h2>About Us</h2>
+                    </Grid>
+                      <span><br />  </span>
                     <div class="col-sm-3">
                       <h6 class="mb-0">Full Name</h6>
                     </div>
@@ -91,6 +102,15 @@ export default function UserProfile() {
                     <div class="col-sm-12">
                       <a class="btn btn-info " href="#">Edit</a>
                     </div>
+                    <Grid item xs={12} className='p_30 fixed-bottom opacity-75'>
+                      <Grid className='float-end'>
+                        <div >
+                          <Link to={`/SettingsPage`}>
+                            <CustomButton text={"Edit"} icon={<EditIcon />} />
+                          </Link>
+                        </div>
+                      </Grid>
+                    </Grid>
                   </div>
                 </div>
               </div>

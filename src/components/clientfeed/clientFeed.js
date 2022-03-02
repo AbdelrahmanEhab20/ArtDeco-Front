@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './clientFeed.css'
@@ -12,11 +13,11 @@ const ClientFeed = () => {
             <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
-                  Basic Plan
+                  Company xyz
                 </h4>
 
                 <div class="text-secondary-d1 text-120">
-                  <span class="ml-n15 align-text-bottom">$</span><span class="text-180">10</span> / M
+                <span class="align-text-bottom"></span><span class="text-180">Cairo</span> / Egypt
                 </div>
               </div>
 
@@ -24,22 +25,21 @@ const ClientFeed = () => {
                 <li>
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span>
-                    <span class="text-110">Donec id elit.</span>
-                    Fusce dapibus...
+                    <span class="text-110">Quality</span>
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Placerat duis
+                    Approved
                   </span>
                 </li>
 
                 <li class="mt-25">
-                  <i class="fa fa-times text-danger-m3 text-110 mr-25 mt-1"></i>
+                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Tortor mauris
+                    Efficiency
                   </span>
                 </li>
               </ul>
@@ -52,17 +52,17 @@ const ClientFeed = () => {
             <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <h4 class="pt-3 text-170 text-600 text-green-d1 letter-spacing">
-                  Pro Plan
+                Company xyz
+
                 </h4>
 
                 <div class="text-secondary-d2 text-120">
                   <div class="text-danger-m3 text-90 mr-1 ml-n4 pos-rel d-inline-block">
-                    $<span class="text-150 deleted-text">30</span>
                     <span>
                       <span class="d-block rotate-45 position-l mt-n475 ml-35 fa-2x text-400 border-l-2 h-5 brc-dark-m1"></span>
                     </span>
                   </div>
-                  <span class="align-text-bottom">$</span><span class="text-180">20</span> / M
+                  <span class="align-text-bottom"></span><span class="text-180">Cairo</span> / Egypt
                 </div>
               </div>
 
@@ -70,20 +70,21 @@ const ClientFeed = () => {
                 <li>
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span>
-                    <span class="text-110">Everything in Basic...</span>
-                  </span>
-                </li>
-                <li class="mt-25">
-                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
-                  <span class="text-110">
-                    Non diam phasellus
+                    <span class="text-110">Quality</span>
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Tortor mauris
+                    Approved
+                  </span>
+                </li>
+
+                <li class="mt-25">
+                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                  <span class="text-110">
+                    Efficiency
                   </span>
                 </li>
               </ul>
@@ -101,11 +102,12 @@ const ClientFeed = () => {
             <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
-                  Premium Plan
+                    Company xyz
+
                 </h4>
 
                 <div class="text-secondary-d1 text-120">
-                  <span class="ml-n15 align-text-bottom">$</span><span class="text-180">50</span> / M
+                <span class="align-text-bottom"></span><span class="text-180">Cairo</span> / Egypt
                 </div>
               </div>
 
@@ -113,21 +115,21 @@ const ClientFeed = () => {
                 <li>
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span>
-                    <span class="text-110">Everything in Pro...</span>
+                    <span class="text-110">Quality</span>
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Placerat duis
+                    Approved
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Molestie nunc non
+                    Efficiency
                   </span>
                 </li>
               </ul>
@@ -144,11 +146,12 @@ const ClientFeed = () => {
             <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
-                  Basic Plan
+                    Company xyz
+
                 </h4>
 
                 <div class="text-secondary-d1 text-120">
-                  <span class="ml-n15 align-text-bottom">$</span><span class="text-180">10</span> / M
+                <span class="align-text-bottom"></span><span class="text-180">Cairo</span> / Egypt
                 </div>
               </div>
 
@@ -156,22 +159,21 @@ const ClientFeed = () => {
                 <li>
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span>
-                    <span class="text-110">Donec id elit.</span>
-                    Fusce dapibus...
+                    <span class="text-110">Quality</span>
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Placerat duis
+                    Approved
                   </span>
                 </li>
 
                 <li class="mt-25">
-                  <i class="fa fa-times text-danger-m3 text-110 mr-25 mt-1"></i>
+                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Tortor mauris
+                    Efficiency
                   </span>
                 </li>
               </ul>
@@ -184,17 +186,17 @@ const ClientFeed = () => {
             <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <h4 class="pt-3 text-170 text-600 text-green-d1 letter-spacing">
-                  Pro Plan
+                  Company xyz
+
                 </h4>
 
                 <div class="text-secondary-d2 text-120">
                   <div class="text-danger-m3 text-90 mr-1 ml-n4 pos-rel d-inline-block">
-                    $<span class="text-150 deleted-text">30</span>
                     <span>
                       <span class="d-block rotate-45 position-l mt-n475 ml-35 fa-2x text-400 border-l-2 h-5 brc-dark-m1"></span>
                     </span>
                   </div>
-                  <span class="align-text-bottom">$</span><span class="text-180">20</span> / M
+                  <span class="align-text-bottom"></span><span class="text-180">Cairo</span> / Egypt
                 </div>
               </div>
 
@@ -202,21 +204,21 @@ const ClientFeed = () => {
                 <li>
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span>
-                    <span class="text-110">Everything in Basic...</span>
+                    <span class="text-110">Quality</span>
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Non diam phasellus
+                    Approved
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Tortor mauris
+                    Efficiency
                   </span>
                 </li>
               </ul>
@@ -234,11 +236,12 @@ const ClientFeed = () => {
             <div class="row align-items-center">
               <div class="col-12 col-md-4">
                 <h4 class="pt-3 text-170 text-600 text-purple-d1 letter-spacing">
-                  Premium Plan
+                                     Company xyz
+
                 </h4>
 
                 <div class="text-secondary-d1 text-120">
-                  <span class="ml-n15 align-text-bottom">$</span><span class="text-180">50</span> / M
+                <span class="align-text-bottom"></span><span class="text-180">Cairo</span> / Egypt
                 </div>
               </div>
 
@@ -246,27 +249,28 @@ const ClientFeed = () => {
                 <li>
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span>
-                    <span class="text-110">Everything in Pro...</span>
+                    <span class="text-110">Quality</span>
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Placerat duis
+                    Approved
                   </span>
                 </li>
 
                 <li class="mt-25">
                   <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
                   <span class="text-110">
-                    Molestie nunc non
+                    Efficiency
                   </span>
                 </li>
               </ul>
 
               <div class="col-12 col-md-4 text-center">
-                <a href="#" class="f-n-hover btn btn-warning btn-raised px-4 py-25 w-75 text-600">Get Started</a>
+                <a href="#" class="f-n-hover btn btn-warning btn-raised px-4 py-25 w-75 text-600">
+                  Get Started</a>
               </div>
             </div>
 

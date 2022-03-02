@@ -115,13 +115,22 @@ return (
                 Contractor
             </Link>
             </li>
-            <li>
+            {/* <li>
             <Link
                 to="/Jobdetails"
                 onClick={handleClose}
                 className={location.pathname === "/Jobdetails" ? "active" : ""}
             >
                 Job details
+            </Link>
+            </li> */}
+            <li>
+            <Link
+                to="/profile"
+                onClick={handleClose}
+                className={location.pathname === "/profile" ? "active" : ""}
+            >
+                Client Profile
             </Link>
             </li>
             <li>
@@ -133,6 +142,15 @@ return (
                 Create Account
             </Link>
             </li>
+            {/* <li>
+            <Link
+                to="/modals"
+                onClick={handleClose}
+                className={location.pathname === "/modals" ? "active" : ""}
+            >
+                Create Account
+            </Link>
+            </li> */}
         </ul>
         </div>
     </div>

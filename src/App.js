@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
-// import NavBar from "./components/navbar/navbar";
-import NavBar from "./components/nav/navbar";
+import NavBar from "./components/navbar/navbar";
+// import NavBar from "./components/nav/navbar";
 import MainPage from './components/mainPage/mainpage'
 import Userlogin from './components/Userlogin/login';
 import Companylogin from './components/Complogin/login';
@@ -19,6 +19,11 @@ import Proposal from './components/proposal/proposal'
 import Blog from './components/blog/Blog'
 import BlogDetail from './components/blog/BlogDetail'
 import BlogItem from './components/blog/BlogItem'
+import InfoSection from './components/Info/InfoSection'
+// import LandScape from './components/Info/LandScape'
+// import Modals from './components/modal/modals'
+import Pricing from './components/Pricing/Price'
+import ProfileScreen from "./components/ClientSettings/ProfileScreen/ProfileScreen";
 import Sidebar from './components/blog/Sidebar'
 import Reset from './components/userReset/reset'
 import CompanyReset from './components/CompReset/reset.js'
@@ -47,6 +52,10 @@ function App() {
         <Route path={"/Proposal"} exact element={<Proposal />}></Route>
         <Route path={"/ContactorProfile"} exact element={<ContactorProfile />}></Route>
         <Route path={"/SettingsPage"} exact element={<SettingsPage />}></Route>
+        <Route path={"/InfoSection"} exact element={<InfoSection />}></Route>
+        <Route path={"/Pricing"} exact element={<Pricing />}></Route>
+        <Route path="/profile" component={ProfileScreen} />
+        {/* <Route path="/LandScape" component={LandScape} /> */}
         <Route path={"/Blog"} exact element={<Blog />}></Route>
         <Route path={"/blog/:id"} exact element={<BlogDetail />}></Route>
         <Route path={"/BlogItem"} exact element={<BlogItem />}></Route>

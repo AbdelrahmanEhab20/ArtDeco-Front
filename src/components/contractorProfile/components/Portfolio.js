@@ -27,7 +27,7 @@ const Portfolio = props => {
       <Grid item xs={12} className=''>
         <Grid container spacing={2} className=''>
           {props.Jobs.map(job => (
-            <Grid item lg={4} md={6} sm={12}>
+            <Grid item lg={4} md={6} sm={12} xs={12}>
               <Card className='job-card'>
                 <CardActionArea>
                   <figure className='card_image'>
@@ -35,7 +35,7 @@ const Portfolio = props => {
                   </figure>
                   <CardContent>
                     <Typography className='job-card-title'>
-                        <h3 className='fw-bold'>{job.title}</h3>
+                        <h6 className='fw-bold'>{job.title}</h6>
                     </Typography>
                     <Typography
                       variant='body2'

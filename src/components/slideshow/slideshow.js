@@ -23,7 +23,7 @@ export default function SlideShow() {
         <div className='hero'>
         <div className='content'>
             <h1>Hire the best companies</h1>
-            <p className='search-text'> Search the largest selection of luxury high-rise apartments, and luxury homes. </p>
+            <p className='search-text'> Search the largest selection of luxury high-rise apartments and luxury homes. </p>
             <form className='search'>
 
                 <div>
